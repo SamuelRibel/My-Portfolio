@@ -7,9 +7,11 @@ WORKDIR /app
 # Copy package files and install dependencies
 COPY package*.json ./
 RUN npm install
+RUN npm run build
+
 
 # Copy the rest of the project files
 COPY . .
 
 # Start Vite dev server
-CMD ["npm", "run", "dev", "--production"]
+CMD ["npm", "run", "preview"]
