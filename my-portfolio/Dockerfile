@@ -12,4 +12,4 @@ RUN npm install
 COPY . .
 
 # Start Vite dev server
-CMD ["npm", "run", "--production"]
+CMD ["npm", "run", "dev", "--production"]
